@@ -50,12 +50,12 @@ void print_newline() {
 
 void print_char(char character) {
     if (character == '\n') {
-        print_new_line();
+        print_newline();
         return;
     }
 
     if (col > NUM_COLS) {
-        print_new_line();
+        print_newline();
     }
 
     buffer[col + NUM_COLS * row] = (struct Char) {
@@ -68,7 +68,7 @@ void print_char(char character) {
 
 void print_str(char* str) {
     for (size_t i = 0; 1; i++) {
-        char character (uint8_t) str[i];
+        char character = (uint8_t) str[i];
 
         if (character == '\0') {
             return;
