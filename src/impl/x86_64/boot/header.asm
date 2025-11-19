@@ -1,6 +1,7 @@
 ;; CONSTANTS
-MULTIBOOTMAGIC equ 0xe85250d6 ; multiboot2 magic number
-HEADERLENGTH equ header_end - header_start
+MULTIBOOTMAGIC 	equ 0xe85250d6 ; multiboot2 magic number
+HEADERLENGTH 		equ header_end - header_start
+CHECKSUM 				equ 0x100000000
 
 section .multiboot_header
 header_start:
@@ -11,7 +12,7 @@ header_start:
     ;; header length
     dd HEADERLENGTH
     ;; checksum
-    dd 0x100000000 - (MULTIBOOTMAGIC + 0 + HEADERLENGTH)
+    dd CHECKSUM - (MULTIBOOTMAGIC + 0 + HEADERLENGTH)
 
     ;; end tag
     dw 0

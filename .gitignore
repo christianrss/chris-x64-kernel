@@ -55,3 +55,8 @@ dkms.conf
 *.dwo
 
 boot/kernel.bin
+
+*.iso
+*.bin
+dist/
+build/
