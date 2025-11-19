@@ -1,0 +1,1 @@
+qemu-system-x86_64 -L "C:\Program Files\qemu" -cdrom dist/x86_64/kernel.iso
